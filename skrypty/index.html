@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/js.cookie.js"></script>
+    <script type="text/javascript" src="./js/pomoc.js"></script>
+    <script type="text/javascript" src="./js/funkcje.js"></script>
+
+    <title>Komunikator Artura</title>
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="./css/style.css" />
+    <link type="text/css" rel="stylesheet" href="./css/messanger.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <div id="login" class="centered">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="zaloguj_login">Login:</label>
+                <input type="text" class="form-control" id="zaloguj_login">
+            </div>
+            <div class="form-group">
+                <label for="zaloguj_haslo">Haslo</label>
+                <input type="password" class="form-control" id="zaloguj_haslo">
+            </div>
+            <div><button type="button" id="btnLoguj" class="btn btn-default">Loguj</button></div>
+
+            <button id="btnNowy" class="btn btn-default">Nowy login</button>
+        </div>
+        <div id="newlogin" class="centered hidden-xs-up">
+            <h2>Nowy login</h2>
+            <table>
+                <tr>
+                    <td>login</td>
+                    <td>
+                        <input type="text" id="nowyLogin">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Haslo</td>
+                    <td>
+                        <input type="password" id="haslo1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Powtorz haslo</td>
+                    <td>
+                        <input type="password" id="haslo2">
+                    </td>
+                </tr>
+            </table>
+            <div class="row"><p id="bladNowego" class="error"></p></div>
+            <button type="button" Id="btnStworz" disabled="true" class="btn btn-default">Wyslij</button>
+
+
+        </div>
+        <div id="chat" class="centered hidden-xs-up">
+            <div class="container-fluid">
+                <span class="label label-primary" id="Witaj">Witaj</span>
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-xs-4">
+                        <button id="btnWyloguj" class="btn btn-default">Wyloguj</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 panel panel-default">
+                        <div class="panel-heading"><h2>Uzytkownicy:</h2></div>
+                        <div class="panel-body">
+                            <div class="loader" id="loaderUzytkownicy"></div>
+                            <ul class="list-group hidden-xs-up" style="height: 80%" id="listaUzytkownikow">
+                                
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-8 hidden-xs-up panel panel-default" id="rozmowa">
+                        <div class="panel-heading" id="rozmowaHeader"></div>
+                        <div class="row" id="rozmowaWiadomosci">
+                            <div class="line-container">
+                                <ul class="ul-msg">
+                                    
+                                </ul>
+  
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Wpisz wiadomosc:
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" style="width: 100%" id="tekstWiadomosc" />
+                            </div>
+                            <div class="col-xs-4">
+                                <button id="btnWyslij" disabled="true" class="btn btn-default">Wyslij wiadomosc</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
